@@ -1,0 +1,27 @@
+<app-header (onAddProduct)="onAddProduct()" (onExport)="exportXlsx()" />
+<section class="toolbar">
+  <div class="container">
+    <app-search-bar (search)="onSearch($event)" />
+  </div>
+</section>
+
+@if (showCreateForm() || editingProduct()) {
+<section class="create-form-overlay">
+  <div class="container">
+    <app-product-form-modal
+      [product]="editingProduct()"
+      (created)="onProductCreated($event)"
+      (updated)="onProductUpdated($event)"
+      (close)="onCancelForm()"
+    />
+  </div>
+</section>
+}
+
+<section class="board container">
+  <app-product-board
+    [query]="query()"
+    (onEdit)="onEditProduct($event)"
+    (onDelete)="onDeleteProduct($event)"
+  />
+</section>

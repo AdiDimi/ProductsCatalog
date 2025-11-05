@@ -1,0 +1,112 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Headphones",
+      "description": "Over-ear wireless headphones with noise cancellation.",
+      "price": 199.99,
+      "stock": 12,
+      "category": "Electronics",
+      "imageUrl": "11.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Smart Watch Pro",
+      "description": "Fitness-focused smart watch with heart-rate tracking.",
+      "price": 349.99,
+      "stock": 3,
+      "category": "Electronics",
+      "imageUrl": "14.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Ultrabook Laptop",
+      "description": "Lightweight laptop with retina display.",
+      "price": 1299.99,
+      "stock": 7,
+      "category": "Computers",
+      "imageUrl": "15.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Automatic Coffee Maker",
+      "description": "Programmable espresso machine.",
+      "price": 159.99,
+      "stock": 0,
+      "category": "Appliances",
+      "imageUrl": "13.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Travel Backpack",
+      "description": "Durable backpack for travel and daily use.",
+      "price": 79.99,
+      "stock": 24,
+      "category": "Accessories",
+      "imageUrl": "17.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Running Shoes ",
+      "description": "Lightweight running shoes with cushioning.",
+      "price": 129.99,
+      "stock": 15,
+      "category": "Footwear",
+      "imageUrl": "12.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Wireless Headphones 2",
+      "description": "Over-ear wireless headphones with noise cancellation.",
+      "price": 199.99,
+      "stock": 12,
+      "category": "Electronics",
+      "imageUrl": "11.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Smart Watch Pro 2",
+      "description": "Fitness-focused smart watch with heart-rate tracking.",
+      "price": 349.99,
+      "stock": 3,
+      "category": "Electronics",
+      "imageUrl": "14.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Ultrabook Laptop 2",
+      "description": "Lightweight laptop with retina display.",
+      "price": 1299.99,
+      "stock": 7,
+      "category": "Computers",
+      "imageUrl": "15.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Automatic Coffee Maker",
+      "description": "Programmable espresso machine.",
+      "price": 159.99,
+      "stock": 0,
+      "category": "Appliances 2",
+      "imageUrl": "13.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Travel Backpack 2",
+      "description": "Durable backpack for travel and daily use.",
+      "price": 79.99,
+      "stock": 24,
+      "category": "Accessories",
+      "imageUrl": "17.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Running Shoes 2",
+      "description": "Lightweight running shoes with cushioning.",
+      "price": 129.99,
+      "stock": 15,
+      "category": "Footwear",
+      "imageUrl": "12.jpg"
+    }
+  ]
+}

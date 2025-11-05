@@ -1,0 +1,60 @@
+/* Global styles */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@layer reset, base, components, utilities;
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    margin: 0;
+  }
+}
+
+@layer base {
+  :root {
+    --bg: #f5f6f7;
+    --text: #222;
+    --muted: #6b7280;
+    --accent: #ff9800;
+    --card: #fff;
+    --shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+    --container: 75rem; /* 1200px */
+  }
+  body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, Noto Sans, 'Apple Color Emoji',
+      'Segoe UI Emoji';
+    color: var(--text);
+    background: var(--bg);
+  }
+  .container {
+    max-width: var(--container);
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+  .toolbar {
+    background: #fff;
+    border-block: 0.0625rem solid #e5e7eb; /* 1px */
+    padding: 0.75rem 0; /* 12px */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+}
+
+@layer utilities {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+}
