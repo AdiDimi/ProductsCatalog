@@ -1,6 +1,6 @@
 # Product Catalog – Frontend Plan
 
-This document outlines the architecture and design decisions used to implement the Product Catalog UI that pairs with the .NET 8+ API (see swagger at http://localhost:8080/swagger/v1/swagger.json).
+This document outlines the architecture and design decisions used to implement the Product Catalog UI that pairs with the .NET 7+ API (see swagger at http://localhost:8080/swagger/v1/swagger.json).
 
 ## Architecture
 
