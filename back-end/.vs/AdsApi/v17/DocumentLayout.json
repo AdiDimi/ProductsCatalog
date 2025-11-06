@@ -1,109 +1,109 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\",
+  "WorkspaceRootPath": "D:\\documents\\ProductCataloge\\back-end\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\endpoints\\adsendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\endpoints\\adsendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:endpoints\\adsendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\data\\ads.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\data\\ads.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:data\\ads.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\repositories\\adredisjsonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\repositories\\adredisjsonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:repositories\\adredisjsonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\repositories\\inmemoryadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\repositories\\inmemoryadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:repositories\\inmemoryadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\repositories\\redisjson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\repositories\\redisjson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:repositories\\redisjson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\services\\photoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\services\\photoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:services\\photoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\repositories\\redisscripts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\repositories\\redisscripts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:repositories\\redisscripts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\services\\icommentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\services\\icommentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:services\\icommentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\services\\iphotoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\services\\iphotoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:services\\iphotoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\models\\stringornumberconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\models\\stringornumberconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:models\\stringornumberconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\services\\adservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\services\\adservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:services\\adservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\repositories\\healthcheckextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\repositories\\healthcheckextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:repositories\\healthcheckextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\validation\\createaddtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\validation\\createaddtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:validation\\createaddtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\validation\\updateaddtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\validation\\updateaddtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:validation\\updateaddtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\validation\\validationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\validation\\validationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:validation\\validationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\repositories\\adrepositoryextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\repositories\\adrepositoryextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:repositories\\adrepositoryextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\wwwroot\\.gitkeep||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\wwwroot\\.gitkeep||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:wwwroot\\.gitkeep||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\wwwroot\\uploads\\.gitkeep||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\wwwroot\\uploads\\.gitkeep||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:wwwroot\\uploads\\.gitkeep||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\wwwroot\\uploads\\thumbs\\.gitkeep||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\wwwroot\\uploads\\thumbs\\.gitkeep||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:wwwroot\\uploads\\thumbs\\.gitkeep||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|c:\\users\\user\\downloads\\adspostsproject\\back-end\\wwwroot\\uploads\\large\\.gitkeep||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|d:\\documents\\productcataloge\\back-end\\wwwroot\\uploads\\large\\.gitkeep||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{4458C33B-00FD-621D-9394-B2C6EE31268C}|AdsApi.csproj|solutionrelative:wwwroot\\uploads\\large\\.gitkeep||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
@@ -120,100 +120,93 @@
               "$type": "Document",
               "DocumentIndex": 23,
               "Title": ".gitkeep",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\wwwroot\\uploads\\.gitkeep",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\wwwroot\\uploads\\.gitkeep",
               "RelativeDocumentMoniker": "wwwroot\\uploads\\.gitkeep",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\wwwroot\\uploads\\.gitkeep",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\wwwroot\\uploads\\.gitkeep",
               "RelativeToolTip": "wwwroot\\uploads\\.gitkeep",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-05T11:29:50.328Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T11:29:50.328Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 24,
               "Title": ".gitkeep",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\wwwroot\\uploads\\thumbs\\.gitkeep",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\wwwroot\\uploads\\thumbs\\.gitkeep",
               "RelativeDocumentMoniker": "wwwroot\\uploads\\thumbs\\.gitkeep",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\wwwroot\\uploads\\thumbs\\.gitkeep",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\wwwroot\\uploads\\thumbs\\.gitkeep",
               "RelativeToolTip": "wwwroot\\uploads\\thumbs\\.gitkeep",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-05T11:29:57.057Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T11:29:57.057Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 25,
               "Title": ".gitkeep",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\wwwroot\\uploads\\large\\.gitkeep",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\wwwroot\\uploads\\large\\.gitkeep",
               "RelativeDocumentMoniker": "wwwroot\\uploads\\large\\.gitkeep",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\wwwroot\\uploads\\large\\.gitkeep",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\wwwroot\\uploads\\large\\.gitkeep",
               "RelativeToolTip": "wwwroot\\uploads\\large\\.gitkeep",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-05T11:30:08.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T11:30:08.793Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Models\\Product.cs",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\Models\\Product.cs",
               "RelativeDocumentMoniker": "Models\\Product.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Models\\Product.cs",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\Models\\Product.cs",
               "RelativeToolTip": "Models\\Product.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T11:13:46.862Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-04T11:13:46.862Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "AdsEndpoints.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Endpoints\\AdsEndpoints.cs",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\Endpoints\\AdsEndpoints.cs",
               "RelativeDocumentMoniker": "Endpoints\\AdsEndpoints.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Endpoints\\AdsEndpoints.cs",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\Endpoints\\AdsEndpoints.cs",
               "RelativeToolTip": "Endpoints\\AdsEndpoints.cs",
               "ViewState": "AgIAAEcAAAAAAAAAAAAnwFIAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T11:53:24.749Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-04T11:53:24.749Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "AdRedisJsonRepository.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Repositories\\AdRedisJsonRepository.cs",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\Repositories\\AdRedisJsonRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\AdRedisJsonRepository.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Repositories\\AdRedisJsonRepository.cs",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\Repositories\\AdRedisJsonRepository.cs",
               "RelativeToolTip": "Repositories\\AdRedisJsonRepository.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAABAAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T11:40:31.08Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-04T11:40:31.08Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "ads.json",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Data\\ads.json",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\Data\\ads.json",
               "RelativeDocumentMoniker": "Data\\ads.json",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Data\\ads.json",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\Data\\ads.json",
               "RelativeToolTip": "Data\\ads.json",
               "ViewState": "AgIAAEUAAAAAAAAAAAAAADEAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-04T11:33:02.01Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-04T11:33:02.01Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\appsettings.json",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\appsettings.json",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -224,61 +217,57 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "docker-compose.yml",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\docker-compose.yml",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\docker-compose.yml",
               "RelativeDocumentMoniker": "docker-compose.yml",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\docker-compose.yml",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\docker-compose.yml",
               "RelativeToolTip": "docker-compose.yml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-11-04T12:05:03.952Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-04T12:05:03.952Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
               "Title": ".gitkeep",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\wwwroot\\.gitkeep",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\wwwroot\\.gitkeep",
               "RelativeDocumentMoniker": "wwwroot\\.gitkeep",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\wwwroot\\.gitkeep",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\wwwroot\\.gitkeep",
               "RelativeToolTip": "wwwroot\\.gitkeep",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-05T11:28:44.438Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T11:28:44.438Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "InMemoryAdRepository.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Repositories\\InMemoryAdRepository.cs",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\Repositories\\InMemoryAdRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\InMemoryAdRepository.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Repositories\\InMemoryAdRepository.cs",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\Repositories\\InMemoryAdRepository.cs",
               "RelativeToolTip": "Repositories\\InMemoryAdRepository.cs",
               "ViewState": "AgIAACYAAAAAAAAAAIAywDUAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T11:52:45.898Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-04T11:52:45.898Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "RedisJson.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Repositories\\RedisJson.cs",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\Repositories\\RedisJson.cs",
               "RelativeDocumentMoniker": "Repositories\\RedisJson.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Repositories\\RedisJson.cs",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\Repositories\\RedisJson.cs",
               "RelativeToolTip": "Repositories\\RedisJson.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAqwAQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T08:13:38.84Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T08:13:38.84Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "RedisScripts.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Repositories\\RedisScripts.cs",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\Repositories\\RedisScripts.cs",
               "RelativeDocumentMoniker": "Repositories\\RedisScripts.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Repositories\\RedisScripts.cs",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\Repositories\\RedisScripts.cs",
               "RelativeToolTip": "Repositories\\RedisScripts.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -288,9 +277,9 @@
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "ICommentService.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Services\\ICommentService.cs",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\Services\\ICommentService.cs",
               "RelativeDocumentMoniker": "Services\\ICommentService.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Services\\ICommentService.cs",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\Services\\ICommentService.cs",
               "RelativeToolTip": "Services\\ICommentService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -300,35 +289,33 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "ProductService.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Services\\ProductService.cs",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\Services\\ProductService.cs",
               "RelativeDocumentMoniker": "Services\\ProductService.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Services\\ProductService.cs",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\Services\\ProductService.cs",
               "RelativeToolTip": "Services\\ProductService.cs",
               "ViewState": "AgIAAGsAAAAAAAAAAAAWwH0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T11:14:24.963Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-04T11:14:24.963Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "PhotoService.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Services\\PhotoService.cs",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\Services\\PhotoService.cs",
               "RelativeDocumentMoniker": "Services\\PhotoService.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Services\\PhotoService.cs",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\Services\\PhotoService.cs",
               "RelativeToolTip": "Services\\PhotoService.cs",
               "ViewState": "AgIAAHIAAAAAAAAAAIAzwIwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T08:11:09.693Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T08:11:09.693Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "IPhotoService.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Services\\IPhotoService.cs",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\Services\\IPhotoService.cs",
               "RelativeDocumentMoniker": "Services\\IPhotoService.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Services\\IPhotoService.cs",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\Services\\IPhotoService.cs",
               "RelativeToolTip": "Services\\IPhotoService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -338,9 +325,9 @@
               "$type": "Document",
               "DocumentIndex": 21,
               "Title": "AdRepositoryExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Repositories\\AdRepositoryExtensions.cs",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\Repositories\\AdRepositoryExtensions.cs",
               "RelativeDocumentMoniker": "Repositories\\AdRepositoryExtensions.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Repositories\\AdRepositoryExtensions.cs",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\Repositories\\AdRepositoryExtensions.cs",
               "RelativeToolTip": "Repositories\\AdRepositoryExtensions.cs",
               "ViewState": "AgIAAEAAAAAAAAAAAABZwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -350,9 +337,9 @@
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "StringOrNumberConverter.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Models\\StringOrNumberConverter.cs",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\Models\\StringOrNumberConverter.cs",
               "RelativeDocumentMoniker": "Models\\StringOrNumberConverter.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Models\\StringOrNumberConverter.cs",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\Models\\StringOrNumberConverter.cs",
               "RelativeToolTip": "Models\\StringOrNumberConverter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -362,9 +349,9 @@
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Dockerfile",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\Dockerfile",
               "RelativeDocumentMoniker": "Dockerfile",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Dockerfile",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\Dockerfile",
               "RelativeToolTip": "Dockerfile",
               "ViewState": "AgIAABMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
@@ -374,9 +361,9 @@
               "$type": "Document",
               "DocumentIndex": 18,
               "Title": "UpdateAdDtoValidator.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Validation\\UpdateAdDtoValidator.cs",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\Validation\\UpdateAdDtoValidator.cs",
               "RelativeDocumentMoniker": "Validation\\UpdateAdDtoValidator.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Validation\\UpdateAdDtoValidator.cs",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\Validation\\UpdateAdDtoValidator.cs",
               "RelativeToolTip": "Validation\\UpdateAdDtoValidator.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAABZwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -386,9 +373,9 @@
               "$type": "Document",
               "DocumentIndex": 17,
               "Title": "CreateAdDtoValidator.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Validation\\CreateAdDtoValidator.cs",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\Validation\\CreateAdDtoValidator.cs",
               "RelativeDocumentMoniker": "Validation\\CreateAdDtoValidator.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Validation\\CreateAdDtoValidator.cs",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\Validation\\CreateAdDtoValidator.cs",
               "RelativeToolTip": "Validation\\CreateAdDtoValidator.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAABZwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -398,9 +385,9 @@
               "$type": "Document",
               "DocumentIndex": 16,
               "Title": "HealthCheckExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Repositories\\HealthCheckExtensions.cs",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\Repositories\\HealthCheckExtensions.cs",
               "RelativeDocumentMoniker": "Repositories\\HealthCheckExtensions.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Repositories\\HealthCheckExtensions.cs",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\Repositories\\HealthCheckExtensions.cs",
               "RelativeToolTip": "Repositories\\HealthCheckExtensions.cs",
               "ViewState": "AgIAACUAAAAAAAAAAABZwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -410,9 +397,9 @@
               "$type": "Document",
               "DocumentIndex": 15,
               "Title": "AdService.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Services\\AdService.cs",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\Services\\AdService.cs",
               "RelativeDocumentMoniker": "Services\\AdService.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Services\\AdService.cs",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\Services\\AdService.cs",
               "RelativeToolTip": "Services\\AdService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAABEwAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -422,9 +409,9 @@
               "$type": "Document",
               "DocumentIndex": 20,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Program.cs",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Program.cs",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAE8AAAAAAAAAAABUwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -434,9 +421,9 @@
               "$type": "Document",
               "DocumentIndex": 19,
               "Title": "ValidationFilter.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Validation\\ValidationFilter.cs",
+              "DocumentMoniker": "D:\\documents\\ProductCataloge\\back-end\\Validation\\ValidationFilter.cs",
               "RelativeDocumentMoniker": "Validation\\ValidationFilter.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\AdsPostsProject\\back-end\\Validation\\ValidationFilter.cs",
+              "ToolTip": "D:\\documents\\ProductCataloge\\back-end\\Validation\\ValidationFilter.cs",
               "RelativeToolTip": "Validation\\ValidationFilter.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAABZwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
