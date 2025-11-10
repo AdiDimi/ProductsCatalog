@@ -3,6 +3,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { Product } from '../../models/generated/models/product';
 import { Photo } from '../../models/generated/models/photo';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-product-card',
@@ -30,7 +31,7 @@ export class ProductCardComponent {
   }
 
   get imgUrl(): string {
-    const direct = 'http://localhost:8080/uploads/thumbs/' + (this.product.id ?? '1') + '.jpg';
+    const direct = `${environment.apiUrl}/uploads/thumbs/${this.product.id ?? '1'}.jpg`;
     if (direct) return direct;
 
     return '';
