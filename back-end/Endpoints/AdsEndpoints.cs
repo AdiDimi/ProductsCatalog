@@ -10,13 +10,25 @@ public static class ProductsEndpoints
         var api = app.MapGroup("/api").WithOpenApi();
         var products = api.MapGroup("products").WithTags("Products");
 
-        products.MapGet("/", async ([AsParameters] Query query, ProductService svc, HttpResponse res) =>
+        products.MapGet("/", async ([AsParameters] Query query, ProductService svc, HttpRequest req, HttpResponse res) =>
         {
             var (items, total) = await svc.SearchAsync(query.q, query.category, query.minPrice, query.maxPrice, query.lat, query.lng, query.radiusKm, query.page, query.pageSize, query.sort);
+
+            // Compute ETag as the max UpdatedAt of the returned items
+            var maxUpdated = items.Any() ? items.Max(p => p.UpdatedAt) : (DateTimeOffset?)null;
+            var etag = maxUpdated.HasValue ? ToEtag(maxUpdated.Value) : "\"0\"";
+
+            // Return 304 if client's If-None-Match matches current ETag
+            if (req.Headers.IfNoneMatch.Contains(etag))
+                return Results.StatusCode(StatusCodes.Status304NotModified);
+
+            // Pagination headers
             res.Headers["X-Total-Count"] = total.ToString();
             res.Headers["X-Page"] = query.page.ToString();
             res.Headers["X-Page-Size"] = query.pageSize.ToString();
-            return Results.Ok(new ApiResponse<IEnumerable<Product>>(items, new { total, page = query.page, pageSize = query.pageSize }));
+
+            return Results.Ok(new ApiResponse<IEnumerable<Product>>(items, new { total, page = query.page, pageSize = query.pageSize }))
+                         .WithEtag(etag);
         })
         .WithSummary("Search products")
         .Produces<ApiResponse<IEnumerable<Product>>>(StatusCodes.Status200OK)
@@ -88,7 +100,7 @@ public static class ProductsEndpoints
         .WithSummary("Export products as CSV (UTF-8 BOM)")
         .Produces(StatusCodes.Status200OK)
         .WithOpenApi();
-
+   
         // Photos upload endpoint (multipart/form-data)
         products.MapPost("/{id}/photos", async (string id, HttpRequest req, IPhotoService photos, ProductService svc) =>
         {

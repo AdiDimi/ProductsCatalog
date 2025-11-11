@@ -4,7 +4,6 @@ import {
   provideZonelessChangeDetection,
 } from '@angular/core';
 import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
-import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { apiHeadersInterceptor } from './interceptors/api-headers.interceptor';
 import { BASE_PATH } from './models/generated/variables';
 import { httpCachingInterceptor } from './interceptors/http-caching.interceptor';
@@ -17,7 +16,6 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
-    provideClientHydration(withEventReplay()),
     provideHttpClient(
       withInterceptors([
         debugInterceptor,
