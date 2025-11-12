@@ -16,6 +16,7 @@ public sealed class AdsRepositorySettings
     public bool UseOutboxWriter { get; set; } = true;
     public int OutboxLockTtlSeconds { get; set; } = 30; // TTL for distributed lock when writing json
     public bool ForceRebuild { get; set; } = false; // If true, clear Redis dataset at startup and reseed from Data
+    public string? PublicBaseUrl { get; set; } = "http://localhost:5080"; // Base URL for serving public assets (e.g., http://localhost:5080)
 }
 
 public static class AdRepositoryExtensions

@@ -8,7 +8,7 @@ using AdsApi.Validation;
 using FluentValidation;
 
 var builder = WebApplication.CreateBuilder(args);
-
+ 
 // Logging (Serilog + sampling)
 builder.AddStructuredLogging();
 
@@ -50,6 +50,9 @@ var app = builder.Build();
 
 // Error middleware
 app.UseGlobalErrorHandler();
+
+// Idempotency header capture (before request logging so it's available downstream)
+app.UseIdempotencyKey();
 
 // Request logging + correlation
 app.UseStructuredRequestLogging();

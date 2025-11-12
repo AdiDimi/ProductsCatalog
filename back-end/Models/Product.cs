@@ -18,7 +18,7 @@ public class Product
     public int Stock { get; set; } = 0;
     public List<Photo> Photos { get; set; } = new();
     // Return the saved photo file name (productId + extension) for front-end usage
-    public string? ImageUrl => Photos.FirstOrDefault()?.FileName;
+    public string? ImageUrl => Photos.FirstOrDefault()?.Url;
     public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow;
     public DateTimeOffset UpdatedAt { get; set; } = DateTimeOffset.UtcNow;
 }

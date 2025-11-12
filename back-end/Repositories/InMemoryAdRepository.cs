@@ -1,12 +1,19 @@
 using System.Collections.Concurrent;
 using System.Text.Json;
 using AdsApi.Models.Converters;
+using Microsoft.Extensions.Options;
 
 namespace AdsApi.Repositories;
 
 public sealed class InMemoryAdRepository : IAdRepository
 {
     private readonly ConcurrentDictionary<string, Product> _store = new();
+    private readonly string _publicBaseUrl;
+
+    public InMemoryAdRepository(IOptions<AdsRepositorySettings>? opts = null)
+    {
+        _publicBaseUrl = (opts?.Value?.PublicBaseUrl ?? "http://localhost:5080").TrimEnd('/');
+    }
 
     public async Task InitializeAsync(CancellationToken ct = default)
     {
@@ -21,22 +28,23 @@ public sealed class InMemoryAdRepository : IAdRepository
 
             await using var fs = File.OpenRead(path);
             using var doc = await JsonDocument.ParseAsync(fs, cancellationToken: ct);
-            var opts = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
-            opts.Converters.Add(new StringOrNumberConverter()); // allow numeric ids
+            var optsJson = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
+            optsJson.Converters.Add(new StringOrNumberConverter()); // allow numeric ids
 
             if (doc.RootElement.TryGetProperty("products", out var arr) && arr.ValueKind == JsonValueKind.Array)
             {
                 foreach (var el in arr.EnumerateArray())
                 {
                     var json = el.GetRawText();
-                    var p = JsonSerializer.Deserialize<Product>(json, opts);
+                    var p = JsonSerializer.Deserialize<Product>(json, optsJson);
                     if (p is null) continue;
                     if (el.TryGetProperty("imageUrl", out var imgEl) && imgEl.ValueKind == JsonValueKind.String)
                     {
                         var url = imgEl.GetString();
                         if (!string.IsNullOrWhiteSpace(url))
                         {
-                            p.Photos = new List<Photo> { new Photo(Guid.NewGuid().ToString("N"), "import", url!) };
+                            var thumb = $"{_publicBaseUrl}/uploads/thumbs/{p.Id}.jpg";
+                            p.Photos = new List<Photo> { new Photo(Guid.NewGuid().ToString("N"), $"{p.Id}.jpg", thumb) };
                         }
                     }
                     _store[p.Id] = p;
@@ -64,7 +72,10 @@ public sealed class InMemoryAdRepository : IAdRepository
             Stock = dto.Stock,
         };
         if (!string.IsNullOrWhiteSpace(dto.ImageUrl))
-            product.Photos = new List<Photo> { new Photo(Guid.NewGuid().ToString("N"), "import", dto.ImageUrl) };
+        {
+            var thumb = $"{_publicBaseUrl}/uploads/thumbs/{product.Id}.jpg";
+            product.Photos = new List<Photo> { new Photo(Guid.NewGuid().ToString("N"), $"{product.Id}.jpg", thumb) };
+        }
 
         _store[product.Id] = product;
         return Task.FromResult(product);
@@ -79,7 +90,10 @@ public sealed class InMemoryAdRepository : IAdRepository
         product.Price = dto.Price ?? product.Price;
         if (dto.Stock is not null) product.Stock = dto.Stock.Value;
         if (!string.IsNullOrWhiteSpace(dto.ImageUrl))
-            product.Photos = new List<Photo> { new Photo(Guid.NewGuid().ToString("N"), "import", dto.ImageUrl) };
+        {
+            var thumb = $"{_publicBaseUrl}/uploads/thumbs/{product.Id}.jpg";
+            product.Photos = new List<Photo> { new Photo(Guid.NewGuid().ToString("N"), $"{product.Id}.jpg", thumb) };
+        }
         product.UpdatedAt = DateTimeOffset.UtcNow;
         _store[id] = product;
         return Task.FromResult(true);

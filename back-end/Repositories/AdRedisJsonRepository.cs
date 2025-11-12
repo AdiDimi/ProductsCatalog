@@ -15,6 +15,7 @@ public sealed class AdRedisJsonRepository : IAdRepository
     private readonly LoadedLuaScript _script;
     private readonly int _idemTtl;
     private readonly bool _forceRebuild;
+    private readonly string _publicBaseUrl;
 
     public AdRedisJsonRepository(IConnectionMultiplexer mux, IOptions<AdsRepositorySettings>? opts = null)
     {
@@ -23,6 +24,7 @@ public sealed class AdRedisJsonRepository : IAdRepository
         _script = LuaScript.Prepare(RedisScripts.UpsertJsonWithOutboxAndIdem).Load(server);
         _idemTtl = opts?.Value?.IdempotencyTtlSeconds ?? 600;
         _forceRebuild = opts?.Value?.ForceRebuild ?? false;
+        _publicBaseUrl = (opts?.Value?.PublicBaseUrl ?? "http://localhost:5080").TrimEnd('/');
         _json.Converters.Add(new StringOrNumberConverter());
     }
 
@@ -54,7 +56,8 @@ public sealed class AdRedisJsonRepository : IAdRepository
                             var url = imgEl.GetString();
                             if (!string.IsNullOrWhiteSpace(url))
                             {
-                                p.Photos = new List<Photo> { new Photo(Guid.NewGuid().ToString("N"), "import", url!) };
+                                var thumb = $"{_publicBaseUrl}/uploads/thumbs/{p.Id}.jpg";
+                                p.Photos = new List<Photo> { new Photo(Guid.NewGuid().ToString("N"), $"{p.Id}.jpg", thumb) };
                             }
                         }
                         await _db.JsonSetAsync($"products:{p.Id}", "$", JsonSerializer.Serialize(p, _json));
@@ -102,7 +105,11 @@ public sealed class AdRedisJsonRepository : IAdRepository
             Price = dto.Price,
             Stock = dto.Stock
         };
-        if (!string.IsNullOrWhiteSpace(dto.ImageUrl)) product.Photos = new List<Photo> { new Photo(Guid.NewGuid().ToString("N"), "import", dto.ImageUrl) };
+        if (!string.IsNullOrWhiteSpace(dto.ImageUrl))
+        {
+            var thumb = $"{_publicBaseUrl}/uploads/thumbs/{product.Id}.jpg";
+            product.Photos = new List<Photo> { new Photo(Guid.NewGuid().ToString("N"), $"{product.Id}.jpg", thumb) };
+        }
         await UpsertWithIdemAsync(product, "create");
         return product;
     }
@@ -116,7 +123,11 @@ public sealed class AdRedisJsonRepository : IAdRepository
         product.Category = dto.Category ?? product.Category;
         product.Price = dto.Price ?? product.Price;
         if (dto.Stock is not null) product.Stock = dto.Stock.Value;
-        if (!string.IsNullOrWhiteSpace(dto.ImageUrl)) product.Photos = new List<Photo> { new Photo(Guid.NewGuid().ToString("N"), "import", dto.ImageUrl) };
+        if (!string.IsNullOrWhiteSpace(dto.ImageUrl))
+        {
+            var thumb = $"{_publicBaseUrl}/uploads/thumbs/{product.Id}.jpg";
+            product.Photos = new List<Photo> { new Photo(Guid.NewGuid().ToString("N"), $"{product.Id}.jpg", thumb) };
+        }
         product.UpdatedAt = DateTimeOffset.UtcNow;
         await UpsertWithIdemAsync(product, "update");
         return true;

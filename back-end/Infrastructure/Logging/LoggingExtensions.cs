@@ -28,6 +28,7 @@ public static class LoggingExtensions
         {
             var reqId = ctx.TraceIdentifier;
             ctx.Response.Headers["X-Request-ID"] = reqId;
+
             using (LogContext.PushProperty("requestId", reqId))
             using (LogContext.PushProperty("method", ctx.Request.Method))
             using (LogContext.PushProperty("path", ctx.Request.Path.ToString()))
@@ -44,8 +45,6 @@ public static class LoggingExtensions
             {
                 diag.Set("requestId", http.TraceIdentifier);
                 diag.Set("clientIp", http.Connection.RemoteIpAddress?.ToString());
-                if (http.Request.Headers.TryGetValue("Idempotency-Key", out var key))
-                    diag.Set("idempotencyKey", (string)key);
                 if (http.User?.Identity?.IsAuthenticated == true)
                     diag.Set("user", http.User.Identity!.Name);
             };

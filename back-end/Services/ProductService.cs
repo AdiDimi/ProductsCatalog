@@ -103,7 +103,7 @@ public sealed class ProductService
         // Build CSV with UTF-8 BOM to support Hebrew in Excel and browsers
         var csv = new System.Text.StringBuilder();
         // Header
-        csv.AppendLine("ID,Name,Description,Price,Stock,Category,ImageFile");
+        csv.AppendLine("ID,Name,Description,Price,Stock,Category,ImageUrl");
         foreach (var p in products)
         {
             string Esc(string? s) => "\"" + (s ?? string.Empty).Replace("\"", "\"\"") + "\"";

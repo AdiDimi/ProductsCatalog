@@ -3,7 +3,7 @@ namespace AdsApi.Repositories;
 public static class RedisScripts
 {
     public const string UpsertJsonWithOutboxAndIdem = @"
-local productKey     = KEYS[1]
+local productKey = KEYS[1]
 local indexKey  = KEYS[2]
 local streamKey = KEYS[3]
 local idemKey   = KEYS[4]
