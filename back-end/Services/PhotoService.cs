@@ -1,19 +1,19 @@
-using System.Diagnostics;
 using AdsApi.Repositories;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats;
+using SixLabors.ImageSharp.Formats.Gif;
 using SixLabors.ImageSharp.Formats.Jpeg;
 using SixLabors.ImageSharp.Formats.Png;
-using SixLabors.ImageSharp.Formats.Gif;
 using SixLabors.ImageSharp.Formats.Webp;
 using SixLabors.ImageSharp.Processing;
+using System.Diagnostics;
 
 namespace AdsApi.Services;
 
 public sealed class PhotoService : IPhotoService
 {
-    private static readonly HashSet<string> AllowedExtensions = new(StringComparer.OrdinalIgnoreCase){ ".jpg", ".jpeg", ".png", ".gif", ".webp" };
-    private static readonly HashSet<string> AllowedContentTypes = new(StringComparer.OrdinalIgnoreCase){ "image/jpeg", "image/png", "image/gif", "image/webp" };
+    private static readonly HashSet<string> AllowedExtensions = new(StringComparer.OrdinalIgnoreCase) { ".jpg", ".jpeg", ".png", ".gif", ".webp" };
+    private static readonly HashSet<string> AllowedContentTypes = new(StringComparer.OrdinalIgnoreCase) { "image/jpeg", "image/png", "image/gif", "image/webp" };
     private const long DefaultMaxBytes = 5 * 1024 * 1024;
     private const int LargeMaxEdge = 1280;
     private const int ThumbMaxEdge = 320;
@@ -28,7 +28,7 @@ public sealed class PhotoService : IPhotoService
 
     public async Task<IReadOnlyList<Photo>> SaveAsync(string adId, IFormFileCollection files, CancellationToken ct = default)
     {
-        using (_log.BeginScope(new Dictionary<string, object?> { ["op"]="photo_upload", ["productId"]=adId, ["count"]=files?.Count }))
+        using (_log.BeginScope(new Dictionary<string, object?> { ["op"] = "photo_upload", ["productId"] = adId, ["count"] = files?.Count }))
         using (AdsApi.Infrastructure.Logging.AuditLog.Begin())
         {
             var swOverall = Stopwatch.StartNew();
@@ -38,7 +38,7 @@ public sealed class PhotoService : IPhotoService
             var file = files[0]; // enforce single image per product
             var created = new List<Photo>(1);
 
-            using (_log.BeginScope(new Dictionary<string, object?> { ["fileName"]=file.FileName, ["size"]=file.Length }))
+            using (_log.BeginScope(new Dictionary<string, object?> { ["fileName"] = file.FileName, ["size"] = file.Length }))
             {
                 ct.ThrowIfCancellationRequested();
                 if (file.Length == 0) throw new InvalidOperationException("File is empty.");
@@ -53,16 +53,16 @@ public sealed class PhotoService : IPhotoService
 
                 var webroot = _env.WebRootPath ?? Path.Combine(_env.ContentRootPath, "wwwroot");
                 var uploads = Path.Combine(webroot, "uploads");
-                var thumbs  = Path.Combine(uploads, "thumbs");
-                var large   = Path.Combine(uploads, "large");
+                var thumbs = Path.Combine(uploads, "thumbs");
+                var large = Path.Combine(uploads, "large");
                 Directory.CreateDirectory(uploads); Directory.CreateDirectory(thumbs); Directory.CreateDirectory(large);
 
                 // Remove previous files for this product id (any known ext)
                 foreach (var e in AllowedExtensions)
                 {
-                    TryDelete(Path.Combine(uploads,     $"{adId}{e}"));
-                    TryDelete(Path.Combine(thumbs,      $"{adId}{e}"));
-                    TryDelete(Path.Combine(large,       $"{adId}{e}"));
+                    TryDelete(Path.Combine(uploads, $"{adId}{e}"));
+                    TryDelete(Path.Combine(thumbs, $"{adId}{e}"));
+                    TryDelete(Path.Combine(large, $"{adId}{e}"));
                 }
 
                 var originalName = $"{adId}{ext}";
@@ -77,7 +77,7 @@ public sealed class PhotoService : IPhotoService
                 File.Move(originalTemp, originalPath, overwrite: true);
 
                 // Create resized variants, same extension
-                await CreateResizedAsync(originalPath, large,  adId, LargeMaxEdge, ext, ct);
+                await CreateResizedAsync(originalPath, large, adId, LargeMaxEdge, ext, ct);
                 await CreateResizedAsync(originalPath, thumbs, adId, ThumbMaxEdge, ext, ct);
 
                 var photo = await _repo.AddPhotoAsync(adId, originalName, $"/uploads/{originalName}", ct, thumbUrl: $"/uploads/thumbs/{adId}{ext}", largeUrl: $"/uploads/large/{adId}{ext}");
@@ -93,8 +93,7 @@ public sealed class PhotoService : IPhotoService
     private static string NormalizeExtension(string ext)
     {
         ext = ext.ToLowerInvariant();
-        if (ext == ".jpeg") return ".jpg";
-        return ext;
+        return ext == ".jpeg" ? ".jpg" : ext;
     }
 
     private static void TryDelete(string path)

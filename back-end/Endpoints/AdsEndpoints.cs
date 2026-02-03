@@ -1,5 +1,6 @@
 using AdsApi.Services;
-using Microsoft.AspNetCore.Mvc;
+using AdsApi.Validation;
+using System.ComponentModel.DataAnnotations;
 
 namespace AdsApi.Endpoints;
 
@@ -31,6 +32,7 @@ public static class ProductsEndpoints
                          .WithEtag(etag);
         })
         .WithSummary("Search products")
+        .AddEndpointFilter<ValidationFilter> ()
         .Produces<ApiResponse<IEnumerable<Product>>>(StatusCodes.Status200OK)
         .ProducesValidationProblem(StatusCodes.Status400BadRequest)
         .WithOpenApi();
@@ -40,8 +42,10 @@ public static class ProductsEndpoints
             var product = await svc.GetAsync(id);
             if (product is null) return Results.NotFound();
             var etag = ToEtag(product.UpdatedAt);
-            if (req.Headers.IfNoneMatch.Contains(etag)) return Results.StatusCode(StatusCodes.Status304NotModified);
-            return Results.Ok(product).WithEtag(etag);
+
+            return req.Headers.IfNoneMatch.Contains(etag)
+                ? Results.StatusCode(StatusCodes.Status304NotModified)
+                : Results.Ok(product).WithEtag(etag);
         })
         .WithSummary("Get product by id")
         .Produces<Product>(StatusCodes.Status200OK)
@@ -100,7 +104,7 @@ public static class ProductsEndpoints
         .WithSummary("Export products as CSV (UTF-8 BOM)")
         .Produces(StatusCodes.Status200OK)
         .WithOpenApi();
-   
+
         // Photos upload endpoint (multipart/form-data)
         products.MapPost("/{id}/photos", async (string id, HttpRequest req, IPhotoService photos, ProductService svc) =>
         {
@@ -118,7 +122,7 @@ public static class ProductsEndpoints
         .ProducesProblem(StatusCodes.Status400BadRequest)
         .ProducesProblem(StatusCodes.Status404NotFound)
         .WithOpenApi();
-   
+
         return app;
     }
 
@@ -126,8 +130,6 @@ public static class ProductsEndpoints
 
     public record ApiResponse<T>(T Data, object? Meta = null, object? Links = null);
 
-    public record Query(string? q, string? category, decimal? minPrice, decimal? maxPrice,
-        double? lat, double? lng, double? radiusKm, int page = 1, int pageSize = 10, string? sort = null);
 }
 
 public static class ResultHeaderExtensions

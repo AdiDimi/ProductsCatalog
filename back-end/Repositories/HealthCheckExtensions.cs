@@ -1,5 +1,3 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.Options;
 using StackExchange.Redis;
 
 namespace AdsApi.Repositories;

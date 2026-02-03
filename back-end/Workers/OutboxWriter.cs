@@ -1,8 +1,8 @@
-using System.Diagnostics;
-using System.Text.Json;
 using AdsApi.Repositories;
 using Microsoft.Extensions.Options;
 using StackExchange.Redis;
+using System.Diagnostics;
+using System.Text.Json;
 
 namespace AdsApi.Workers;
 
@@ -11,7 +11,7 @@ public sealed class OutboxWriter : BackgroundService
     private readonly IDatabase _db;
     private readonly ILogger<OutboxWriter> _log;
     private readonly string _stream = "products-outbox";
-    private readonly string _group  = "writer";
+    private readonly string _group = "writer";
     private readonly string _consumer = Environment.MachineName + "-" + Guid.NewGuid().ToString("N")[..6];
     private readonly string _jsonPath;
     private readonly JsonSerializerOptions _json = new() { PropertyNamingPolicy = JsonNamingPolicy.CamelCase, WriteIndented = true };
@@ -30,11 +30,11 @@ public sealed class OutboxWriter : BackgroundService
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        using (_log.BeginScope(new Dictionary<string, object?> { ["worker"]="OutboxWriter", ["stream"]=_stream, ["group"]=_group, ["consumer"]=_consumer }))
+        using (_log.BeginScope(new Dictionary<string, object?> { ["worker"] = "OutboxWriter", ["stream"] = _stream, ["group"] = _group, ["consumer"] = _consumer }))
         {
             _log.LogInformation("Outbox writer starting");
-            try { await _db.StreamCreateConsumerGroupAsync(_stream, _group, "0-0", createStream: true ); } catch {}
-          
+            try { await _db.StreamCreateConsumerGroupAsync(_stream, _group, "0-0", createStream: true); } catch { }
+
             var batchSize = 200;
             var flushEvery = TimeSpan.FromMilliseconds(500);
             var last = Stopwatch.StartNew();

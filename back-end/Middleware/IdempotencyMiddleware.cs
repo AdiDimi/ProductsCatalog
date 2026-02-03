@@ -1,5 +1,3 @@
-using AdsApi.Middleware;
-
 namespace AdsApi.Middleware;
 
 public sealed class IdempotencyMiddleware

@@ -13,9 +13,9 @@ namespace AdsApi.Models.Converters
             if (reader.TokenType == JsonTokenType.String) return reader.GetString();
             if (reader.TokenType == JsonTokenType.Number)
             {
-                if (reader.TryGetInt64(out var l)) return l.ToString();
-                if (reader.TryGetDouble(out var d)) return d.ToString(System.Globalization.CultureInfo.InvariantCulture);
-                return reader.GetString();
+                return reader.TryGetInt64(out var l)
+                    ? l.ToString()
+                    : reader.TryGetDouble(out var d) ? d.ToString(System.Globalization.CultureInfo.InvariantCulture) : reader.GetString();
             }
             if (reader.TokenType == JsonTokenType.Null) return null;
             // fallback to string representation

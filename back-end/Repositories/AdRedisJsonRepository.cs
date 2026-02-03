@@ -1,8 +1,7 @@
-using System.Text.Json;
+using AdsApi.Models.Converters;
 using Microsoft.Extensions.Options;
 using StackExchange.Redis;
-using AdsApi.Middleware;
-using AdsApi.Models.Converters;
+using System.Text.Json;
 
 namespace AdsApi.Repositories;
 
@@ -66,7 +65,7 @@ public sealed class AdRedisJsonRepository : IAdRepository
                 }
             }
         }
-        try { await _db.StreamCreateConsumerGroupAsync(_stream, "writer", "0-0", createStream: true); } catch {}
+        try { await _db.StreamCreateConsumerGroupAsync(_stream, "writer", "0-0", createStream: true); } catch { }
     }
 
     public IReadOnlyList<Product> Snapshot()

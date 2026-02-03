@@ -1,4 +1,3 @@
-using Microsoft.Extensions.Configuration;
 using Serilog;
 using Serilog.Context;
 using Serilog.Formatting.Json;

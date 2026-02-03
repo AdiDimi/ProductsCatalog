@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace AdsApi;
 
 public record Photo(

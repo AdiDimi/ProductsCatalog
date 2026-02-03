@@ -33,8 +33,11 @@ public sealed class ErrorHandlingMiddleware
             case DomainValidationException dv:
                 status = StatusCodes.Status400BadRequest;
                 code = ErrorCodes.Validation;
-                problem = new HttpValidationProblemDetails(dv.Errors) {
-                    Title = dv.Message, Status = status, Type = "https://httpstatuses.com/400"
+                problem = new HttpValidationProblemDetails(dv.Errors)
+                {
+                    Title = dv.Message,
+                    Status = status,
+                    Type = "https://httpstatuses.com/400"
                 };
                 break;
             case NotFoundException nf:

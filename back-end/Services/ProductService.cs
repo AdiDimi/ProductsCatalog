@@ -1,7 +1,7 @@
-using System.Diagnostics;
-using System.Globalization;
 using AdsApi.Infrastructure.Logging;
 using AdsApi.Repositories;
+using System.Diagnostics;
+using System.Globalization;
 
 namespace AdsApi.Services;
 
@@ -14,7 +14,7 @@ public sealed class ProductService
 
     public Task<(IEnumerable<Product> items, int total)> SearchAsync(
         string? q, string? category, decimal? minPrice, decimal? maxPrice,
-        double? lat, double? lng, double? radiusKm, int page=1, int pageSize=20, string? sort=null)
+        double? lat, double? lng, double? radiusKm, int page = 1, int pageSize = 20, string? sort = null)
     {
         using (_log.BeginScope(new Dictionary<string, object?> { ["op"] = "products_search", ["search"] = q, ["category"] = category, ["page"] = page, ["pageSize"] = pageSize, ["sort"] = sort }))
         {
@@ -27,12 +27,12 @@ public sealed class ProductService
             if (maxPrice is not null) query = query.Where(a => a.Price <= maxPrice);
             query = sort switch
             {
-                "priceAsc"  => query.OrderBy(a => a.Price ?? decimal.MaxValue),
+                "priceAsc" => query.OrderBy(a => a.Price ?? decimal.MaxValue),
                 "priceDesc" => query.OrderByDescending(a => a.Price ?? decimal.MinValue),
                 _ => query.OrderByDescending(a => a.CreatedAt)
             };
             var total = query.Count();
-            var items = query.Skip((page-1)*pageSize).Take(pageSize).ToArray();
+            var items = query.Skip((page - 1) * pageSize).Take(pageSize).ToArray();
             sw.Stop();
             _log.LogInformation("Search returned {Count} of {Total} in {ElapsedMs} ms", items.Length, total, sw.ElapsedMilliseconds);
             return Task.FromResult(((IEnumerable<Product>)items, total));

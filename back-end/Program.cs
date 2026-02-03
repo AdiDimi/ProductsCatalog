@@ -1,4 +1,3 @@
-using System.Reflection;
 using AdsApi.Endpoints;
 using AdsApi.Infrastructure.Logging;
 using AdsApi.Middleware;
@@ -6,9 +5,11 @@ using AdsApi.Repositories;
 using AdsApi.Services;
 using AdsApi.Validation;
 using FluentValidation;
+using System.Reflection;
+using MicroElements.Swashbuckle.FluentValidation.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
- 
+
 // Logging (Serilog + sampling)
 builder.AddStructuredLogging();
 
@@ -23,7 +24,9 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 // FluentValidation
-builder.Services.AddValidatorsFromAssemblyContaining<CreateProductDtoValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<ProductsSearchQueryValidator>();
+builder.Services.AddProblemDetails();
+builder.Services.AddFluentValidationRulesToSwagger();
 
 // CORS - allow Angular dev server
 builder.Services.AddCors(options =>
@@ -37,6 +40,7 @@ builder.Services.AddCors(options =>
               .WithExposedHeaders("ETag", "X-Total-Count", "X-Page", "X-Page-Size");
     });
 });
+
 
 // Repo & services
 builder.Services.AddAdsRepository(builder.Configuration);
@@ -71,12 +75,14 @@ app.UseSwaggerUI(c =>
     c.RoutePrefix = string.Empty;
 });
 
-// Validation filter on /api
-var api = app.MapGroup("/api");
-api.AddEndpointFilter(new ValidationFilter(app.Services));
+//Validation filter on /api
+//var api = app.MapGroup("/api");
+//api.AddEndpointFilter(new ValidationFilter());
 
 // Map endpoints
 app.MapProductsEndpoints();
+
+
 // Health
 app.MapHealthChecks();
 

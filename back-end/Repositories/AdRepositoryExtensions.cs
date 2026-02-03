@@ -1,6 +1,3 @@
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using StackExchange.Redis;
 
@@ -37,7 +34,8 @@ public static class AdRepositoryExtensions
                 var mux = ConnectionMultiplexer.Connect(settings.RedisConnection ?? "localhost:6379");
                 services.AddSingleton<IConnectionMultiplexer>(sp => mux);
 
-                services.AddSingleton<IAdRepository>(sp => {
+                services.AddSingleton<IAdRepository>(sp =>
+                {
                     var opts = sp.GetRequiredService<IOptions<AdsRepositorySettings>>();
                     return new AdRedisJsonRepository(mux, opts);
                 });
