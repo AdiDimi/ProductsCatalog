@@ -1,0 +1,147 @@
+# This tells tools: "Start here, don't search parent folders for more .editorconfig"
+root = true
+
+########################################
+# Global settings (all files)
+########################################
+
+[*]
+charset = utf-8
+end_of_line = crlf
+insert_final_newline = true
+
+# Indentation rules (default for all files)
+indent_style = tab
+indent_size = 4
+tab_width = 4
+trim_trailing_whitespace = true
+dotnet_style_operator_placement_when_wrapping = beginning_of_line
+dotnet_style_coalesce_expression = true:suggestion
+dotnet_style_null_propagation = true:suggestion
+dotnet_style_prefer_is_null_check_over_reference_equality_method = true:suggestion
+dotnet_style_prefer_auto_properties = true:silent
+dotnet_style_object_initializer = true:suggestion
+dotnet_style_require_accessibility_modifiers = for_non_interface_members:silent
+dotnet_style_allow_multiple_blank_lines_experimental = true:silent
+dotnet_style_allow_statement_immediately_after_block_experimental = true:silent
+
+########################################
+# C# code style
+########################################
+
+[*.cs]
+
+# ---------- Nullable reference types ----------
+# Equivalent to <Nullable>enable</Nullable> in .csproj, but enforced via editorconfig
+build_property.Nullable = enable
+
+# (optional) Make nullable warnings stricter
+dotnet_analyzer_diagnostic.category-NullableAnalysis.severity = warning
+
+# ---------- Max line length ----------
+# For analyzers / formatting tools that respect it (VS, Roslyn, some linters)
+max_line_length = 120
+
+# You can also tell wrapping rules in some IDEs to respect this:
+csharp_preferred_wrapping_preserve_single_line = false:suggestion
+
+# ---------- Indentation (C#-specific override if needed) ----------
+csharp_indent_block_contents = true
+csharp_indent_braces = true
+csharp_indent_switch_labels = true
+
+########################################
+# Naming rules
+########################################
+
+# 1) Private fields: _camelCase
+
+dotnet_naming_rule.private_fields_should_be_camel_with_underscore.severity = warning
+dotnet_naming_rule.private_fields_should_be_camel_with_underscore.symbols = private_fields
+dotnet_naming_rule.private_fields_should_be_camel_with_underscore.style = camel_with_underscore
+
+dotnet_naming_symbols.private_fields.applicable_kinds = field
+dotnet_naming_symbols.private_fields.applicable_accessibilities = private
+dotnet_naming_symbols.private_fields.required_modifiers =
+
+dotnet_naming_style.camel_with_underscore.capitalization = camel_case
+dotnet_naming_style.camel_with_underscore.required_prefix = _
+dotnet_naming_style.camel_with_underscore.required_suffix =
+
+# 2) Interfaces: PascalCase starting with 'I'
+
+dotnet_naming_rule.interfaces_should_be_prefixed_with_i.severity = warning
+dotnet_naming_rule.interfaces_should_be_prefixed_with_i.symbols = interfaces
+dotnet_naming_rule.interfaces_should_be_prefixed_with_i.style = pascal_with_i_prefix
+
+dotnet_naming_symbols.interfaces.applicable_kinds = interface
+dotnet_naming_symbols.interfaces.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_symbols.interfaces.required_modifiers =
+
+dotnet_naming_style.pascal_with_i_prefix.capitalization = pascal_case
+dotnet_naming_style.pascal_with_i_prefix.required_prefix = I
+dotnet_naming_style.pascal_with_i_prefix.required_suffix =
+
+# 3) Classes/structs/records: PascalCase
+
+dotnet_naming_rule.types_should_be_pascal_case.severity = warning
+dotnet_naming_rule.types_should_be_pascal_case.symbols = types
+dotnet_naming_rule.types_should_be_pascal_case.style = pascal_case_style
+
+dotnet_naming_symbols.types.applicable_kinds = class, struct, record
+dotnet_naming_symbols.types.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_symbols.types.required_modifiers =
+
+dotnet_naming_style.pascal_case_style.capitalization = pascal_case
+dotnet_naming_style.pascal_case_style.required_prefix =
+dotnet_naming_style.pascal_case_style.required_suffix =
+
+# 4) Constants: ALL_CAPS_WITH_UNDERSCORES
+
+dotnet_naming_rule.constants_should_be_all_caps.severity = suggestion
+dotnet_naming_rule.constants_should_be_all_caps.symbols = constants
+dotnet_naming_rule.constants_should_be_all_caps.style = all_caps_style
+
+dotnet_naming_symbols.constants.applicable_kinds = field
+dotnet_naming_symbols.constants.applicable_accessibilities = *
+dotnet_naming_symbols.constants.required_modifiers = const
+
+dotnet_naming_style.all_caps_style.capitalization = all_upper
+dotnet_naming_style.all_caps_style.word_separator = _
+
+########################################
+# C# formatting preferences (optional but nice)
+########################################
+
+# Use 'var' only when it's obvious
+csharp_style_var_for_built_in_types = false:suggestion
+csharp_style_var_when_type_is_apparent = true:suggestion
+csharp_style_var_elsewhere = false:suggestion
+
+# Expression-bodied members when short
+csharp_style_expression_bodied_methods = when_on_single_line:suggestion
+csharp_style_expression_bodied_properties = when_on_single_line:suggestion
+
+# Prefer using statement (not block)
+csharp_prefer_simple_using_statement = true:suggestion
+csharp_indent_labels = one_less_than_current
+csharp_using_directive_placement = outside_namespace:silent
+csharp_prefer_braces = true:silent
+csharp_style_namespace_declarations = block_scoped:silent
+csharp_style_prefer_method_group_conversion = true:silent
+csharp_style_prefer_top_level_statements = true:silent
+csharp_style_prefer_primary_constructors = true:suggestion
+csharp_prefer_system_threading_lock = true:suggestion
+csharp_style_expression_bodied_constructors = false:silent
+csharp_style_expression_bodied_operators = false:silent
+csharp_style_expression_bodied_indexers = true:silent
+csharp_style_expression_bodied_accessors = true:silent
+csharp_style_expression_bodied_lambdas = true:silent
+csharp_style_expression_bodied_local_functions = false:silent
+csharp_space_between_method_declaration_name_and_open_parenthesis = true
+csharp_space_around_binary_operators = before_and_after
+csharp_style_allow_embedded_statements_on_same_line_experimental = true:silent
+csharp_style_allow_blank_lines_between_consecutive_braces_experimental = true:silent
+csharp_style_allow_blank_line_after_colon_in_constructor_initializer_experimental = true:silent
+csharp_style_allow_blank_line_after_token_in_conditional_expression_experimental = true:silent
+csharp_style_allow_blank_line_after_token_in_arrow_expression_clause_experimental = true:silent
