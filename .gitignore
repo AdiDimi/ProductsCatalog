@@ -1,5 +1,5 @@
 # Build results
-bin/
+back-end/bin/
 obj/
 
 # Visual Studio user-specific files
