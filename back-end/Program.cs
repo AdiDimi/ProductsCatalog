@@ -1,26 +1,37 @@
 using AdsApi.Endpoints;
+using AdsApi.Infrastructure.KeyVault;
 using AdsApi.Infrastructure.Logging;
 using AdsApi.Middleware;
 using AdsApi.Repositories;
 using AdsApi.Services;
 using AdsApi.Validation;
 using FluentValidation;
-using System.Reflection;
 using MicroElements.Swashbuckle.FluentValidation.AspNetCore;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 // Logging (Serilog + sampling)
 builder.AddStructuredLogging();
+builder.AddKeyVaultOptions();
+
+//builder.Logging
+//.AddApplicationInsights(
+//telemetry => telemetry.ConnectionString =
+//builder
+//.Configuration["Azure:ApplicationInsights:ConnectionString"],
+//loggerOptions => { });
+
 
 // Swagger / OpenAPI
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
-    options.SwaggerDoc("v1", new() { Title = "Products API", Version = "v1" });
-    var xml = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-    var xmlPath = Path.Combine(AppContext.BaseDirectory, xml);
-    if (File.Exists(xmlPath)) options.IncludeXmlComments(xmlPath);
+	options.SwaggerDoc("v1", new() { Title = "Products API", Version = "v1" });
+	var xml = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+	var xmlPath = Path.Combine(AppContext.BaseDirectory, xml);
+	if (File.Exists(xmlPath)) options.IncludeXmlComments(xmlPath);
 });
 
 // FluentValidation
@@ -31,14 +42,14 @@ builder.Services.AddFluentValidationRulesToSwagger();
 // CORS - allow Angular dev server
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAngularDev", policy =>
-    {
-        policy.WithOrigins("http://localhost:4200")
-              .AllowAnyHeader()
-              .AllowAnyMethod()
-              .AllowCredentials()
-              .WithExposedHeaders("ETag", "X-Total-Count", "X-Page", "X-Page-Size");
-    });
+	options.AddPolicy("AllowAngularDev", policy =>
+	{
+		policy.WithOrigins("http://localhost:4200")
+			  .AllowAnyHeader()
+			  .AllowAnyMethod()
+			  .AllowCredentials()
+			  .WithExposedHeaders("ETag", "X-Total-Count", "X-Page", "X-Page-Size");
+	});
 });
 
 
@@ -71,8 +82,8 @@ app.UseStaticFiles();
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Products API v1");
-    c.RoutePrefix = string.Empty;
+	c.SwaggerEndpoint("/swagger/v1/swagger.json", "Products API v1");
+	c.RoutePrefix = string.Empty;
 });
 
 //Validation filter on /api

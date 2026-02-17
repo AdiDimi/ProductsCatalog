@@ -31,6 +31,7 @@ public sealed class ErrorHandlingMiddleware
         switch (ex)
         {
             case DomainValidationException dv:
+
                 status = StatusCodes.Status400BadRequest;
                 code = ErrorCodes.Validation;
                 problem = new HttpValidationProblemDetails(dv.Errors)
